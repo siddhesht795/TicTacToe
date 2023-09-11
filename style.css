@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Montserrat:wght@300&family=Roboto+Condensed:wght@700&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+nav{
+	background-color: #000000;
+	color: #F30B0B;
+	height: 70px;
+	display: flex;
+	align-items: center;
+	font-size: 1.8rem;
+	padding: 0px 10px 0px 20px;
+	font-family: 'Montserrat', sans-serif;
+	text-shadow: 2px 2px 10px #FFFB78;
+}
+
+.logo:hover{
+	animation: logo 1s ease-in 0s 1 normal forwards;
+}
+
+@keyframes logo {
+	0%,100%{
+		font-size: 1.8rem;
+	}
+
+	50%{
+		font-size: 2rem;
+	}
+}
+
+nav ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.gameContainer{
+	display: flex;
+	justify-content: center;
+	margin-top: 50px;
+	flex-wrap: wrap;
+}
+
+.container{
+	display: grid;
+	grid-template-columns: repeat(3,10vw);
+	grid-template-rows: repeat(3,10vw);
+	position: relative;
+}
+
+.box{
+	border: 5px solid black;
+	font-size: 5vw;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.box:hover{
+	background-color: #CACEFF;
+}
+
+.gameInfo{
+	padding: 0px 80px;
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 2vw;
+}
+
+.imgbox img{
+	width: 0;
+	transition: width 1s ease-in-out;
+}
+
+.br-0{
+	border-right: 0;
+}
+
+.bl-0{
+	border-left: 0;
+}
+
+.bt-0{
+	border-top: 0;
+}
+
+.bb-0{
+	border-bottom: 0;
+}
+
+.boxtext{
+	font-size: 10vw;
+	padding-top: 30px;
+}
+
+#reset {
+	margin: 30px;
+	padding:14px 19px;
+	background-color: #FFFB78;
+	cursor: pointer;
+	box-shadow: 4px 3px 5px #F30B0B;
+	font-family: 'Roboto Condensed', sans-serif;
+	border-radius: 5px;
+}
+
+#reset:hover{
+	background-color: #e8e46f;
+}
+
+@media screen and (max-width: 800px) {
+	.gameContainer{
+		flex-wrap: wrap;
+	}
+	.gameInfo{
+		margin-top: 34px;
+	}
+	.gameInfo h1{
+		font-size: 2rem;
+	}
+
+	.container {
+		grid-template-rows: repeat(3,20vw);
+		grid-template-columns: repeat(3,20vw);				
+	}
+}
+
+.line{
+	background-color: #ff0000;
+	height: 7px;
+	width: 0vw;
+	position: absolute;
+	box-shadow: 5px 5px 9px #000000;
+	transition: width 1s ease-in-out;
+}
